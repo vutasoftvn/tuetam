@@ -103,6 +103,20 @@ describe("coloring studio", () => {
     expect(firstRegion).toHaveAttribute("fill", "#ffffff");
   });
 
+  it("keeps the thumbnail list scrollable without clipping on short tablet screens", () => {
+    render(<ColoringStudio />);
+    const templateButton = screen.getByRole("button", { name: "Bông hoa 5 vùng tô" });
+    const thumbnailGrid = templateButton.parentElement;
+    const sidebar = thumbnailGrid?.parentElement;
+
+    expect(sidebar?.className).toContain("overflow-hidden");
+    expect(thumbnailGrid?.className).toContain("min-h-0");
+    expect(thumbnailGrid?.className).toContain("flex-1");
+    expect(thumbnailGrid?.className).toContain("overflow-y-auto");
+    expect(thumbnailGrid?.className).toContain("content-start");
+    expect(thumbnailGrid?.className).toContain("pb-24");
+  });
+
   it("stretches the coloring area and color picker across the main workspace", () => {
     render(<ColoringStudio />);
     expect(screen.getByTestId("coloring-canvas-shell").className).toContain("w-full");

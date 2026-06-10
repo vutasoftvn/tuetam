@@ -41,3 +41,24 @@ input {
 .color-palette-grid {
   grid-template-columns: repeat(16, minmax(0, 1fr));
 }
+
+@media (orientation: landscape) and (max-height: 820px) {
+  .template-sidebar {
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .template-category-grid {
+    gap: 0.375rem;
+  }
+
+  .template-category-button {
+    min-height: 2.875rem;
+    border-radius: 1rem;
+  }
+
+  .template-category-icon {
+    height: 1.75rem;
+    width: 1.75rem;
+  }
+}

@@ -54,8 +54,8 @@ export function TemplateLibrary({
   const visible = templates.filter((template) => template.category === activeCategory);
 
   return (
-    <aside className="flex h-full w-56 shrink-0 flex-col gap-3 border-r border-[#e4d8c4] bg-[#fffaf0] p-3">
-      <div className="grid grid-cols-2 gap-2">
+    <aside className="template-sidebar flex h-full w-56 shrink-0 flex-col gap-3 overflow-hidden border-r border-[#e4d8c4] bg-[#fffaf0] p-3">
+      <div className="template-category-grid grid shrink-0 grid-cols-2 gap-2">
         {categories.map((category) => {
           const Icon = categoryIcons[category.id];
           const theme = categoryThemes[category.id];
@@ -66,12 +66,13 @@ export function TemplateLibrary({
               type="button"
               aria-label={category.label}
               onClick={() => onCategoryChange(category.id)}
-              className={`flex min-h-16 items-center justify-center rounded-2xl px-2 shadow-sm ring-4 transition-transform active:scale-95 ${
+              className={`template-category-button flex min-h-16 items-center justify-center rounded-2xl px-2 shadow-sm ring-4 transition-transform active:scale-95 ${
                 selected ? `${theme.active} ring-offset-1` : `${theme.inactive} ring-transparent`
               }`}
             >
               <Icon
                 aria-hidden="true"
+                className="template-category-icon"
                 data-testid={`category-icon-${category.id}`}
                 data-icon-color={theme.color}
                 color={theme.color}
@@ -83,7 +84,7 @@ export function TemplateLibrary({
         })}
       </div>
 
-      <div className="grid grid-cols-2 gap-x-4 gap-y-6 overflow-auto pb-3">
+      <div className="grid min-h-0 flex-1 content-start grid-cols-2 gap-x-4 gap-y-6 overflow-y-auto overscroll-contain pb-24 pr-1">
         {visible.length === 0 ? (
           <div className="col-span-2 rounded-2xl bg-white p-4 text-center text-sm font-bold text-[#6f6658]">
             Chưa có mẫu nào
