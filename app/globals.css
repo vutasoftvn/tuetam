@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: "Arial Rounded MT Bold", "Trebuchet MS", "Nunito", Arial, Helvetica, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.coloring-stage > div,
+.coloring-stage svg {
+  height: 100%;
+  width: 100%;
+}
+
+.coloring-stage svg {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.color-palette-grid {
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+}

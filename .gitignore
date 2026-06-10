@@ -1,0 +1,14 @@
+.DS_Store
+.superpowers/
+node_modules/
+.next/
+out/
+test-results/
+playwright-report/
+coverage/
+.env
+.env*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
