@@ -33,7 +33,7 @@ export function ColoringCanvas({
   return (
     <section
       data-testid="coloring-canvas-shell"
-      className="flex min-h-0 w-full flex-1 items-stretch justify-stretch p-4"
+      className="coloring-canvas-shell flex min-h-0 w-full flex-1 items-stretch justify-stretch p-4"
     >
       <div
         data-testid="coloring-stage"

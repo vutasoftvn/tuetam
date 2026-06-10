@@ -84,7 +84,7 @@ export function TemplateLibrary({
         })}
       </div>
 
-      <div className="grid min-h-0 flex-1 content-start grid-cols-2 gap-x-4 gap-y-6 overflow-y-auto overscroll-contain pb-24 pr-1">
+      <div className="template-grid grid min-h-0 flex-1 content-start grid-cols-2 gap-x-4 gap-y-6 overflow-y-auto overscroll-contain pb-24 pr-1">
         {visible.length === 0 ? (
           <div className="col-span-2 rounded-2xl bg-white p-4 text-center text-sm font-bold text-[#6f6658]">
             Chưa có mẫu nào

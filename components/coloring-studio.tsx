@@ -70,7 +70,7 @@ export function ColoringStudio() {
   }
 
   return (
-    <main data-testid="coloring-app" className="relative flex h-dvh overflow-hidden bg-[#fbf7ef] text-[#222]">
+    <main data-testid="coloring-app" className="coloring-app relative flex h-dvh overflow-hidden bg-[#fbf7ef] text-[#222]">
       <TemplateLibrary
         templates={state.templates}
         activeTemplateId={state.activeTemplateId}
@@ -78,15 +78,15 @@ export function ColoringStudio() {
         onCategoryChange={setActiveCategory}
         onTemplateSelect={(id) => setState((current) => selectTemplate(current, id))}
       />
-      <section className="flex min-w-0 flex-1 flex-col">
-        <header className="flex h-16 shrink-0 items-center justify-between gap-4 px-6">
-          <h1 className="text-3xl font-black">Bé Tập Tô Màu</h1>
-          <div data-testid="header-actions" className="flex items-center gap-3">
+      <section data-testid="coloring-workspace" className="coloring-workspace flex min-w-0 flex-1 flex-col overflow-hidden">
+        <header className="coloring-header flex h-16 shrink-0 items-center justify-between gap-4 px-6">
+          <h1 className="coloring-title text-3xl font-black">Bé Tập Tô Màu</h1>
+          <div data-testid="header-actions" className="coloring-header-actions flex items-center gap-3">
             <button
               type="button"
               aria-label="Hoàn tác"
               onClick={() => setState(undoFill)}
-              className="flex h-12 w-14 items-center justify-center rounded-2xl bg-[#dff5ff] text-[#0f6b8f] shadow-sm transition-transform active:scale-95"
+              className="coloring-action-button flex h-12 w-14 items-center justify-center rounded-2xl bg-[#dff5ff] text-[#0f6b8f] shadow-sm transition-transform active:scale-95"
             >
               <Undo2 aria-hidden="true" size={24} strokeWidth={3} />
             </button>
@@ -94,14 +94,14 @@ export function ColoringStudio() {
               type="button"
               aria-label="Tô lại"
               onClick={resetTemplate}
-              className="flex h-12 w-14 items-center justify-center rounded-2xl bg-[#ffe2e8] text-[#be2856] shadow-sm transition-transform active:scale-95"
+              className="coloring-action-button flex h-12 w-14 items-center justify-center rounded-2xl bg-[#ffe2e8] text-[#be2856] shadow-sm transition-transform active:scale-95"
             >
               <RotateCcw aria-hidden="true" size={24} strokeWidth={3} />
             </button>
             <button
               type="button"
               aria-label="Đã lưu"
-              className="flex h-12 w-14 items-center justify-center rounded-2xl bg-[#dcfce7] text-[#16824a] shadow-sm"
+              className="coloring-action-button flex h-12 w-14 items-center justify-center rounded-2xl bg-[#dcfce7] text-[#16824a] shadow-sm"
             >
               <Save aria-hidden="true" size={24} strokeWidth={3} />
             </button>
