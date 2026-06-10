@@ -66,6 +66,15 @@ input {
   border-radius: clamp(0.875rem, 1.4vw, 1rem);
 }
 
+.template-grid {
+  grid-auto-rows: max-content;
+}
+
+.template-card {
+  height: clamp(4.75rem, 12dvh, 5.75rem);
+  width: 100%;
+}
+
 @media (orientation: landscape) and (max-height: 820px) {
   .coloring-header {
     height: 3.5rem;
@@ -113,6 +122,10 @@ input {
     padding-right: 0.25rem;
   }
 
+  .template-card {
+    height: clamp(4.25rem, 11.5dvh, 5.25rem);
+  }
+
   .coloring-toolbar {
     min-height: 4.75rem;
     padding: 0.625rem 1rem;
@@ -158,6 +171,10 @@ input {
   .template-grid {
     gap: 0.625rem;
     padding-bottom: 0.75rem;
+  }
+
+  .template-card {
+    height: clamp(4rem, 11dvh, 4.875rem);
   }
 
   .coloring-toolbar {

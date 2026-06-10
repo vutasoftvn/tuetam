@@ -95,6 +95,8 @@ describe("coloring studio", () => {
     expect(templateButton.querySelector("svg")).toBeInTheDocument();
     expect(templateButton.className).toContain("p-1");
     expect(templateButton.className).toContain("rounded-2xl");
+    expect(templateButton.className).toContain("template-card");
+    expect(templateButton.className).not.toContain("aspect-square");
     expect(templateButton.parentElement?.className).toContain("gap-x-4");
     expect(templateButton.parentElement?.className).toContain("gap-y-6");
     expect(templateButton.querySelector("span")?.className).toContain("[&_svg]:p-0");

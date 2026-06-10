@@ -96,7 +96,7 @@ export function TemplateLibrary({
             type="button"
             aria-label={`${template.title} ${template.regionIds.length} vùng tô`}
             onClick={() => onTemplateSelect(template.id)}
-            className={`aspect-square overflow-hidden rounded-2xl border-4 bg-white p-1 shadow-sm transition-transform active:scale-95 ${
+            className={`template-card overflow-hidden rounded-2xl border-4 bg-white p-1 shadow-sm transition-transform active:scale-95 ${
               template.id === activeTemplateId ? "border-[#38bdf8]" : "border-transparent"
             }`}
           >
