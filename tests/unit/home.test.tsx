@@ -9,6 +9,9 @@ describe("home page", () => {
     const coloringCard = screen.getByRole("link", { name: "TÔ MÀU" });
     expect(coloringCard).toHaveAttribute("href", "/to-mau");
     expect(coloringCard.querySelector("svg")).toBeInTheDocument();
+    const mathCard = screen.getByRole("link", { name: "TOÁN LOGIC" });
+    expect(mathCard).toHaveAttribute("href", "/toan-logic");
+    expect(mathCard.querySelector("svg")).toBeInTheDocument();
     expect(screen.queryByTestId("coloring-canvas-shell")).not.toBeInTheDocument();
   });
 

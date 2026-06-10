@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Palette } from "lucide-react";
+import { Palette, Shapes } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -19,6 +19,16 @@ export default function HomePage() {
               <Palette aria-hidden="true" size={58} strokeWidth={3} />
             </span>
             <span className="text-3xl font-black">TÔ MÀU</span>
+          </Link>
+          <Link
+            href="/toan-logic"
+            aria-label="TOÁN LOGIC"
+            className="flex aspect-square flex-col items-center justify-center gap-5 rounded-3xl border-4 border-white bg-[#f0fff4] p-6 text-[#17834e] shadow-sm transition-transform active:scale-95"
+          >
+            <span className="flex h-24 w-24 items-center justify-center rounded-[2rem] bg-[#d7fce3]">
+              <Shapes aria-hidden="true" size={58} strokeWidth={3} />
+            </span>
+            <span className="text-center text-3xl font-black leading-tight">TOÁN LOGIC</span>
           </Link>
         </div>
       </section>
