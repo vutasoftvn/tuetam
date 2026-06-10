@@ -26,6 +26,10 @@ input {
   font: inherit;
 }
 
+.coloring-stage {
+  container-type: size;
+}
+
 .coloring-stage > div,
 .coloring-stage svg {
   height: 100%;
@@ -36,6 +40,11 @@ input {
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
+}
+
+.coloring-stage > .coloring-artboard {
+  height: min(100cqw, 100cqh);
+  width: min(100cqw, 100cqh);
 }
 
 .color-palette-grid {

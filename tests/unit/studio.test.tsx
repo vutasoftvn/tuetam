@@ -119,9 +119,13 @@ describe("coloring studio", () => {
 
   it("stretches the coloring area and color picker across the main workspace", () => {
     render(<ColoringStudio />);
+    expect(screen.getByTestId("coloring-app").className).toContain("h-dvh");
     expect(screen.getByTestId("coloring-canvas-shell").className).toContain("w-full");
-    expect(screen.getByTestId("coloring-stage").className).toContain("w-full");
+    expect(screen.getByTestId("coloring-stage").className).toContain("overflow-hidden");
     expect(screen.getByTestId("coloring-stage").className).not.toContain("aspect-square");
+    expect(screen.getByTestId("coloring-artboard").className).toContain("aspect-square");
+    expect(screen.getByTestId("coloring-artboard").className).toContain("max-w-full");
+    expect(screen.getByTestId("coloring-artboard").className).toContain("max-h-full");
     expect(screen.getByTestId("toolbar").className).toContain("w-full");
     expect(screen.getByTestId("toolbar").className).toContain("flex-col");
     expect(screen.getByTestId("color-palette").className).toContain("w-full");

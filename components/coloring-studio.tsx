@@ -70,7 +70,7 @@ export function ColoringStudio() {
   }
 
   return (
-    <main className="relative flex h-screen overflow-hidden bg-[#fbf7ef] text-[#222]">
+    <main data-testid="coloring-app" className="relative flex h-dvh overflow-hidden bg-[#fbf7ef] text-[#222]">
       <TemplateLibrary
         templates={state.templates}
         activeTemplateId={state.activeTemplateId}
